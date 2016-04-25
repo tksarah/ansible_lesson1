@@ -1,6 +1,6 @@
 
 #Lesson1 for Ansible Handson
-with Docker v1.11
+ with Docker v1.11
 
 # Administration tasks
 Ansible ハンズオンを行うためのホスト側の準備。
