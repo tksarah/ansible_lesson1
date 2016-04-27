@@ -19,7 +19,18 @@ Ansible ハンズオンを行うための以下の準備を行うPlaybook
 * ユーザ毎にAnsible HostとAnsible Targtのコンテナを起動
  
 ## Run Playbook
-ユーザ毎にハンズオンできるように準備するためのPlaybookを実行する。
+1. 作成するユーザのリストを vars/userlist.yml き記載する
+```
+group1: [ 'user1' , 'user2' , 'user3' ]
+group2: [ 'user4' , 'user5' , 'user6' ]
+```
+
++ main.yml にどのリストで準備するかを指定する
+```
+      with_items:
+        - "{{ group1 }}"
+```
++ ユーザ毎にハンズオンできるように準備するためのPlaybookを実行する
 
 ```
 ansible-playbook -i hosts main.yml
