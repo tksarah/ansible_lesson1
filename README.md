@@ -24,7 +24,6 @@ Ansible ハンズオンを行うための以下の準備を行うPlaybook
 group1: [ 'user1' , 'user2' , 'user3' ]
 group2: [ 'user4' , 'user5' , 'user6' ]
 ```
-
 2. main.yml にどのリストで準備するかを指定する
 ```
       with_items:
