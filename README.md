@@ -1,6 +1,7 @@
-
-#Lesson1 for Ansible Handson
- with Docker v1.11
+# Lesson1 for Ansible Handson
+* CentOS 7.2
+* Docker Engine v1.11
+* Ansible 2.0.1
 
 ## Administration tasks
 まず、ホストの準備をする。（未記載,これもPlaybook用意）
@@ -11,7 +12,7 @@
 * このリポジトリを clone した後、lesson1_files/tools/setup.sh の HOSTADDR にホストのIPアドレスを入れる
 
 ## Details of this playbook 
-Ansible ハンズオンを行うための以下の準備を行うPlaybook。
+Ansible ハンズオンを行うための以下の準備を行うPlaybook
 * リバースプロキシの起動（Dockerコンテナ内と外との80ポートをつなぐ）
 * ハンズオン実施ユーザを複数作成
 * ユーザのホームディレクトリにハンズオン用のツールを配置
@@ -24,8 +25,8 @@ Ansible ハンズオンを行うための以下の準備を行うPlaybook。
 ansible-playbook -i hosts main.yml
 ```
 
-## Run exec
-出力されたポートにフォワーディングをかけるようにリバースプロキシの設定を行う。
+## Run docker exec
+出力されたポートにフォワーディングをかけるようにリバースプロキシの設定を行う
 
 ```
 docker exec -it rproxy bast
