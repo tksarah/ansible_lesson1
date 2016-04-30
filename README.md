@@ -24,15 +24,10 @@ Ansible ハンズオンを行うための以下の準備を行うPlaybook
 group1: [ 'user1' , 'user2' , 'user3' ]
 group2: [ 'user4' , 'user5' , 'user6' ]
 ```
-main.yml にどのリストで準備するかを指定する
-```
-      with_items:
-        - "{{ group1 }}"
-```
-ユーザ毎にハンズオンできるように準備するためのPlaybookを実行
+指定したユーザ毎にハンズオンできるように準備するためのPlaybookを実行
 
 ```
-ansible-playbook -i hosts main.yml
+ansible-playbook -i hosts -e group=group1 main.yml
 ```
 
 ## Run docker exec
