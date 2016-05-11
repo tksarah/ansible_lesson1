@@ -2,8 +2,8 @@
   gather_facts: no
 
   vars:
-    tname: "{{ user }}_target"
-    hname: "{{ user }}_host"
+    tname: "{{ user }}_l1_target"
+    hname: "{{ user }}_l1_host"
     port: "80"
     ops: "absent"
 
