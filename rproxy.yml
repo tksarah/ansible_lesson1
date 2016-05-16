@@ -1,3 +1,6 @@
+    - name: Build rproxy image
+      docker_image: path="./dockerfile" name="tksarah/rproxy" state=build
+
     - block:
         - name: Run Reverse Proxy on my container
           docker:
