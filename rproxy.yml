@@ -1,4 +1,7 @@
     - block:
+        - name: Delete rproxy image
+          docker_image: name="tksarah/rproxy" state=absent
+
         - name: Build rproxy image
           docker_image: path="./dockerfile" name="tksarah/rproxy" state=build
 
