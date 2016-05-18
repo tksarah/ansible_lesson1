@@ -34,15 +34,3 @@ main.yml の with_items のパラメータを修正する
 ```
 ansible-playbook -i hosts main.yml
 ```
-
-## Run docker exec
-出力されたポートにフォワーディングをかけるようにリバースプロキシの設定を行う
-
-```
-docker exec -it rproxy bast
-```
-
-* edit /etc/nginx/sites-available/proxy 
-* restart nginx
-
-
